@@ -6,6 +6,7 @@ This is my atttempt at a kata to create an object that behaves like a vending ma
 #Instructions#
 
 The vending machine has 
+
 *	Seven selection buttons: numbered 0 - 6
 *	*Cancel selection* and *Cancel transaction* buttons.  
 *	a slot that accepts coins 
@@ -17,6 +18,7 @@ The vending machine has
 The machine allows users to select the item they want to buy by keying in the three-digit item code using the numbered keys, and inserting coins to cover the cost of the item. Once the machine has received a valid selection and sufficient money, it sends the purchased item to the hopper and any change to the coin tray. 
 
 Your vending machine should have the following behaviours
+
 1. When it first starts up, it enters the ready state. In this state, the machine displays “Ready”.
 2. A user must key in a three-digit code using the seletion buttons to form a complete selection. If the selection buttons are pressed just once or twice, the selection is incomplete, and the machine displays “Selection incomplete: xy” where xy is the incomplete selection.
 3. Once a complete selection of three digits has been keyed in, the machine changes its display; if the selection is a valid one, it displays “Selected: xyz”. If the selection is invalid, the machine displays “Selection invalid: xyz”.
