@@ -1,11 +1,6 @@
-VendingMachineKata
-==================
+#Vending Machine Kata#
 
-This is my atttempt at a kata to create an object that behaves like a vending machine
-
-#Instructions#
-
-The vending machine has 
+A vending machine has 
 
 *	Seven selection buttons: numbered 0 - 6
 *	*Cancel selection* and *Cancel transaction* buttons.  
@@ -13,11 +8,11 @@ The vending machine has
 *	a tray for returning coins
 *	a hopper where the purchased items are delivered
 *	a two-line display; each line can show up to 20 characters. The top line is used for showing the item that has been selected and the bottom line for showing the amount of money required to make a purchase
-*	capacity for 30 products, with item codes 012-016, 022-026, 032-036, 112-116, 122-126 and 132-136. Each is priced individually.
+*	capacity for 30 products, which are arranged in 5 rows of 6. Each product has a code in the form , 0[row][column], e.g. 012 represents the 3rd product in the 2nd row. Each is priced individually.
 
-The machine allows users to select the item they want to buy by keying in the three-digit item code using the numbered keys, and inserting coins to cover the cost of the item. Once the machine has received a valid selection and sufficient money, it sends the purchased item to the hopper and any change to the coin tray. 
+The machine allows users to select the item they want to buy by keying in the three-digit item code using the numbered keys, and inserting coins to cover the cost of the item. Once the machine has received a valid selection and sufficient money, it immediately sends the purchased item to the hopper and any change to the coin tray. 
 
-Your vending machine should have the following behaviours
+The vending machine behaves like this
 
 1. When it first starts up, it enters the ready state. In this state, the machine displays “Ready”.
 2. A user must key in a three-digit code using the seletion buttons to form a complete selection. If the selection buttons are pressed just once or twice, the selection is incomplete, and the machine displays “Selection incomplete: xy” where xy is the incomplete selection.
@@ -29,6 +24,6 @@ Your vending machine should have the following behaviours
 8. If the current selection is incomplete or invalid and some money has been inserted, the machine displays “xy inserted” where y is the total value of the inserted coins.
 9. If the current selection is incomplete or invalid and no money has been inserted, the machine doesn’t display anything about money.
 10. If at any time, the *Cancel transaction* button is pressed, the machine returns all the coins inserted since it was last in the ready state to the coin tray, cancels the current selection and returns to the ready state.
-11. If at any time, the machine has a valid selection and amount of money inserted is sufficient to purchase the selected item, the machine transfers the item to the hopper, sends any change to the coin tray and returns to the ready state.
+11. If at any time, the machine has a valid selection and amount of money inserted is sufficient to purchase the selected item, the machine immediately transfers the item to the hopper, sends any change to the coin tray and returns to the ready state.
 
 
