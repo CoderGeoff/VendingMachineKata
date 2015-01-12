@@ -13,7 +13,7 @@ namespace VendingMachine
             m_Display = new Display{Row1 = c_Ready};
             m_ButtonPad = new ButtonPad(OnClearTransaction, OnSelectionChanged);
             m_CoinSlot = new CoinInHopper(OnCoinInserted);
-            OnSelectionChanged();
+            SetDisplay();
         }
 
         private void OnCoinInserted()
@@ -22,6 +22,11 @@ namespace VendingMachine
         }
 
         private void OnSelectionChanged()
+        {
+            SetDisplay();
+        }
+
+        private void SetDisplay()
         {
             var currentSelection = m_ButtonPad.GetCurrentSelection();
             m_Display.Row1 = String.IsNullOrEmpty(currentSelection) ? c_Ready : currentSelection;
